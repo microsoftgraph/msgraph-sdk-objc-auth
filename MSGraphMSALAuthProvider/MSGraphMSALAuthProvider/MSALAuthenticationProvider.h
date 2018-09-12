@@ -3,8 +3,7 @@
 //
 #import <Foundation/Foundation.h>
 #import <MSAL/MSAL.h>
-#import "MSAuthenticationProvider.h"
-//#import <MSGraphCoreSDK/MSGraphCoreSDK.h>
+#import <MSGraphCoreSDK/MSGraphCoreSDK.h>
 
 @interface MSALAuthenticationProvider : NSObject<MSAuthenticationProvider>
 

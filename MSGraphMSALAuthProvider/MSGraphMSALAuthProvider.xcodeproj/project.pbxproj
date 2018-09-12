@@ -12,7 +12,6 @@
 		E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50467212148273F00E97F84 /* MSALAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5AACA42214941C3001B9146 /* MSALAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */; };
-		E5AACA4F21494884001B9146 /* MSAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AACA3F21493A84001B9146 /* MSAuthenticationProvider.h */; };
 		E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EF242B2149338B00CDE1C4 /* MSAL.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,7 +210,6 @@
 			files = (
 				E50467212148273F00E97F84 /* MSALAuthenticationProvider.h in Headers */,
 				E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */,
-				E5AACA4F21494884001B9146 /* MSAuthenticationProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
