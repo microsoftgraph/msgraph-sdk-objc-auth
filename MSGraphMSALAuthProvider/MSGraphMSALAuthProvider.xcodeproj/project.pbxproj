@@ -12,6 +12,7 @@
 		E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50467212148273F00E97F84 /* MSALAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5AACA42214941C3001B9146 /* MSALAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */; };
+		E5B6DB6321495B5C00836E1D /* MSGraphCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6DB6021495B5100836E1D /* MSGraphCoreSDK.framework */; };
 		E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EF242B2149338B00CDE1C4 /* MSAL.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = E50467042148089F00E97F84;
 			remoteInfo = MSGraphMSALAuthProvider;
+		};
+		E5B6DB5F21495B5100836E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5B6DB5021495B5100836E1D /* MSGraphCoreSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E5DC73DA211412BF0040BAB6;
+			remoteInfo = MSGraphCoreSDK;
+		};
+		E5B6DB6121495B5100836E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5B6DB5021495B5100836E1D /* MSGraphCoreSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E5069AD6211C1AD500432372;
+			remoteInfo = MSGraphCoreSDKTests;
 		};
 		E5EF242A2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -105,6 +120,7 @@
 		E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALAuthenticationProvider.h; sourceTree = "<group>"; };
 		E5AACA3F21493A84001B9146 /* MSAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAuthenticationProvider.h; path = "msgraph-sdk-objc/MSGraphCoreSDK/MSGraphCoreSDK/Authentication/MSAuthenticationProvider.h"; sourceTree = "<group>"; };
 		E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProvider.m; sourceTree = "<group>"; };
+		E5B6DB5021495B5100836E1D /* MSGraphCoreSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSGraphCoreSDK.xcodeproj; path = "msgraph-sdk-objc/MSGraphCoreSDK/MSGraphCoreSDK.xcodeproj"; sourceTree = "<group>"; };
 		E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSAL.xcodeproj; path = msalIos/MSAL/MSAL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B6DB6321495B5C00836E1D /* MSGraphCoreSDK.framework in Frameworks */,
 				E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +148,7 @@
 		E50466FB2148089F00E97F84 = {
 			isa = PBXGroup;
 			children = (
+				E5B6DB5021495B5100836E1D /* MSGraphCoreSDK.xcodeproj */,
 				E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */,
 				E50467072148089F00E97F84 /* MSGraphMSALAuthProvider */,
 				E50467122148089F00E97F84 /* MSGraphMSALAuthProviderTests */,
@@ -182,6 +200,15 @@
 				E5AACA3F21493A84001B9146 /* MSAuthenticationProvider.h */,
 			);
 			name = MSGraphCoreSDK;
+			sourceTree = "<group>";
+		};
+		E5B6DB5121495B5100836E1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5B6DB6021495B5100836E1D /* MSGraphCoreSDK.framework */,
+				E5B6DB6221495B5100836E1D /* MSGraphCoreSDKTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E5EF241D2149338B00CDE1C4 /* Products */ = {
@@ -286,6 +313,10 @@
 					ProductGroup = E5EF241D2149338B00CDE1C4 /* Products */;
 					ProjectRef = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
 				},
+				{
+					ProductGroup = E5B6DB5121495B5100836E1D /* Products */;
+					ProjectRef = E5B6DB5021495B5100836E1D /* MSGraphCoreSDK.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -296,6 +327,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E5B6DB6021495B5100836E1D /* MSGraphCoreSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MSGraphCoreSDK.framework;
+			remoteRef = E5B6DB5F21495B5100836E1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5B6DB6221495B5100836E1D /* MSGraphCoreSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MSGraphCoreSDKTests.xctest;
+			remoteRef = E5B6DB6121495B5100836E1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E5EF242B2149338B00CDE1C4 /* MSAL.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
