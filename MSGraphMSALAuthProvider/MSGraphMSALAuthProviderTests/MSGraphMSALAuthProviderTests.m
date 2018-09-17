@@ -1,12 +1,8 @@
 //
-//  MSGraphMSALAuthProviderTests.m
-//  MSGraphMSALAuthProviderTests
+// Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT License. See License in the project root for license information.
 //
-//  Created by Vikas Dadheech on 11/09/18.
-//  Copyright © 2018 Microsoft. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 
 @interface MSGraphMSALAuthProviderTests : XCTestCase
 
@@ -24,16 +20,6 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end

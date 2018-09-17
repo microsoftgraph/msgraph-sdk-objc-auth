@@ -12,6 +12,8 @@
 		E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50467212148273F00E97F84 /* MSALAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E56677FC2149850100C6B7AE /* MSGraphCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6DBB52149836500836E1D /* MSGraphCoreSDK.framework */; };
+		E5667825214BD31000C6B7AE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5667824214BD31000C6B7AE /* libOCMock.a */; };
+		E5667827214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */; };
 		E5AACA42214941C3001B9146 /* MSALAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */; };
 		E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EF242B2149338B00CDE1C4 /* MSAL.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,18 @@
 		E50467132148089F00E97F84 /* MSGraphMSALAuthProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSGraphMSALAuthProviderTests.m; sourceTree = "<group>"; };
 		E50467152148089F00E97F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALAuthenticationProvider.h; sourceTree = "<group>"; };
+		E566781A214BD31000C6B7AE /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		E566781B214BD31000C6B7AE /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		E566781C214BD31000C6B7AE /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		E566781D214BD31000C6B7AE /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		E566781E214BD31000C6B7AE /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		E566781F214BD31000C6B7AE /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		E5667820214BD31000C6B7AE /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		E5667821214BD31000C6B7AE /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		E5667822214BD31000C6B7AE /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		E5667823214BD31000C6B7AE /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		E5667824214BD31000C6B7AE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProviderTests.m; sourceTree = "<group>"; };
 		E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProvider.m; sourceTree = "<group>"; };
 		E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSGraphCoreSDK.xcodeproj; path = "msgraph-sdk-objc/MSGraphCoreSDK/MSGraphCoreSDK.xcodeproj"; sourceTree = "<group>"; };
 		E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSAL.xcodeproj; path = msalIos/MSAL/MSAL.xcodeproj; sourceTree = "<group>"; };
@@ -138,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E504670F2148089F00E97F84 /* MSGraphMSALAuthProvider.framework in Frameworks */,
+				E5667825214BD31000C6B7AE /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,9 +194,37 @@
 			isa = PBXGroup;
 			children = (
 				E50467132148089F00E97F84 /* MSGraphMSALAuthProviderTests.m */,
+				E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */,
+				E566780B214BBFFE00C6B7AE /* Frameworks */,
 				E50467152148089F00E97F84 /* Info.plist */,
 			);
 			path = MSGraphMSALAuthProviderTests;
+			sourceTree = "<group>";
+		};
+		E566780B214BBFFE00C6B7AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5667824214BD31000C6B7AE /* libOCMock.a */,
+				E5667819214BD31000C6B7AE /* OCMock */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5667819214BD31000C6B7AE /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				E566781A214BD31000C6B7AE /* OCMockObject.h */,
+				E566781B214BD31000C6B7AE /* OCMMacroState.h */,
+				E566781C214BD31000C6B7AE /* OCMock.h */,
+				E566781D214BD31000C6B7AE /* NSNotificationCenter+OCMAdditions.h */,
+				E566781E214BD31000C6B7AE /* OCMFunctions.h */,
+				E566781F214BD31000C6B7AE /* OCMStubRecorder.h */,
+				E5667820214BD31000C6B7AE /* OCMRecorder.h */,
+				E5667821214BD31000C6B7AE /* OCMLocation.h */,
+				E5667822214BD31000C6B7AE /* OCMConstraint.h */,
+				E5667823214BD31000C6B7AE /* OCMArg.h */,
+			);
+			path = OCMock;
 			sourceTree = "<group>";
 		};
 		E5B6DBA62149836500836E1D /* Products */ = {
@@ -426,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50467142148089F00E97F84 /* MSGraphMSALAuthProviderTests.m in Sources */,
+				E5667827214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,8 +656,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "&(PROJECT_DIIR)/MSGraphMSALAuthProviderTests/Frameworks";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks";
 				INFOPLIST_FILE = MSGraphMSALAuthProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -624,8 +675,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "&(PROJECT_DIIR)/MSGraphMSALAuthProviderTests/Frameworks";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks";
 				INFOPLIST_FILE = MSGraphMSALAuthProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
