@@ -22,7 +22,7 @@ We use [Carthage](https://github.com/Carthage/Carthage) for package management d
 
 ```
 
-github "microsoftgraph/msgraph-sdk-objc-auth" "master"
+github "microsoftgraph/msgraph-sdk-objc-auth" "tags/<latest_release_tag>"
 
 ```
 
