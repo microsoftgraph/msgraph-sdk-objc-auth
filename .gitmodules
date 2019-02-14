@@ -1,6 +1,1 @@
-[submodule "MSGraphMSALAuthProvider/msalIos"]
-	path = MSGraphMSALAuthProvider/msalIos
-	url = https://github.com/AzureAD/microsoft-authentication-library-for-objc
-[submodule "MSGraphMSALAuthProvider/msgraph-sdk-objc"]
-	path = MSGraphMSALAuthProvider/msgraph-sdk-objc
-	url = https://github.com/microsoftgraph/msgraph-sdk-objc.git
+
