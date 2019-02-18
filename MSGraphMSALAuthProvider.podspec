@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/microsoftgraph/msgraph-sdk-objc-auth.git", :tag=> s.version }
 
-  s.source_files  = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/MSGraphMSALAuthProvider.h"
+  s.source_files  = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/*.{h,m}"
   s.exclude_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProviderTests/*"
   s.public_header_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/*.h"
 
-  s.dependency 'MSGraphClientSDK/Authentication', '~> 0.1.2'
+  s.dependency 'MSGraphClientSDK', '~> 0.1.2'
   s.dependency 'MSAL', '~> 0.2'
 end
