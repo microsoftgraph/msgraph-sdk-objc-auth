@@ -1,1 +1,0 @@
-../../../../MSAL/MSAL/src/telemetry/MSALTelemetryAPIEvent.h

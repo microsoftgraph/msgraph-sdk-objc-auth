@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/MSGraphMSALAuthProvider.h"
   s.exclude_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProviderTests/*"
-  s.public_header_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/MSGraphMSALAuthProvider.h"
+  s.public_header_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/*.h"
 
   s.dependency 'MSGraphClientSDK/Authentication', '~> 0.1.2'
   s.dependency 'MSAL', '~> 0.2'

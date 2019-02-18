@@ -1,1 +1,0 @@
-../../../MSGraphClientSDK/MSGraphClientSDK/MSGraphClientSDK/Authentication/MSAuthenticationProvider.h

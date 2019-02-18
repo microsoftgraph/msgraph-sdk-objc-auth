@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B532AA42328FC36ABFE1B117 /* libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE59117BEADD8C6F835FA8F4 /* libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a */; };
-		D01E5DA90E9B2D8177D0F679 /* libPods-MSGraphMSALAuthProvider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E74063463B4B83A5C36F2A5 /* libPods-MSGraphMSALAuthProvider.a */; };
 		E504670F2148089F00E97F84 /* MSGraphMSALAuthProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50467052148089F00E97F84 /* MSGraphMSALAuthProvider.framework */; };
 		E50467142148089F00E97F84 /* MSGraphMSALAuthProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E50467132148089F00E97F84 /* MSGraphMSALAuthProviderTests.m */; };
 		E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,11 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BC4CBE69B50E6ECDF1A3280 /* Pods-MSGraphMSALAuthProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGraphMSALAuthProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGraphMSALAuthProvider/Pods-MSGraphMSALAuthProvider.debug.xcconfig"; sourceTree = "<group>"; };
-		7E74063463B4B83A5C36F2A5 /* libPods-MSGraphMSALAuthProvider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGraphMSALAuthProvider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85E2EFC682E42BA8BC141AEF /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.release.xcconfig"; sourceTree = "<group>"; };
-		BB74C1885301E1AAE8C71C57 /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C0F4B97C837A6400D688C128 /* libPods-MSGraphMSALAuthProviderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGraphMSALAuthProviderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50467052148089F00E97F84 /* MSGraphMSALAuthProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSGraphMSALAuthProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSGraphMSALAuthProvider.h; sourceTree = "<group>"; };
 		E50467092148089F00E97F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,8 +47,6 @@
 		E5667824214BD31000C6B7AE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProviderTests.m; sourceTree = "<group>"; };
 		E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProvider.m; sourceTree = "<group>"; };
-		EE59117BEADD8C6F835FA8F4 /* libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0BA3AC6D82C930D3136E4A8 /* Pods-MSGraphMSALAuthProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGraphMSALAuthProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSGraphMSALAuthProvider/Pods-MSGraphMSALAuthProvider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01E5DA90E9B2D8177D0F679 /* libPods-MSGraphMSALAuthProvider.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,42 +63,18 @@
 			files = (
 				E504670F2148089F00E97F84 /* MSGraphMSALAuthProvider.framework in Frameworks */,
 				E5667825214BD31000C6B7AE /* libOCMock.a in Frameworks */,
-				B532AA42328FC36ABFE1B117 /* libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6DCD39C84646564E7F278AF7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1BC4CBE69B50E6ECDF1A3280 /* Pods-MSGraphMSALAuthProvider.debug.xcconfig */,
-				F0BA3AC6D82C930D3136E4A8 /* Pods-MSGraphMSALAuthProvider.release.xcconfig */,
-				BB74C1885301E1AAE8C71C57 /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.debug.xcconfig */,
-				85E2EFC682E42BA8BC141AEF /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		75D4AEB40B7CBA90468499EC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7E74063463B4B83A5C36F2A5 /* libPods-MSGraphMSALAuthProvider.a */,
-				C0F4B97C837A6400D688C128 /* libPods-MSGraphMSALAuthProviderTests.a */,
-				EE59117BEADD8C6F835FA8F4 /* libPods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E50466FB2148089F00E97F84 = {
 			isa = PBXGroup;
 			children = (
 				E50467072148089F00E97F84 /* MSGraphMSALAuthProvider */,
 				E50467122148089F00E97F84 /* MSGraphMSALAuthProviderTests */,
 				E50467062148089F00E97F84 /* Products */,
-				6DCD39C84646564E7F278AF7 /* Pods */,
-				75D4AEB40B7CBA90468499EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,12 +154,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E50467192148089F00E97F84 /* Build configuration list for PBXNativeTarget "MSGraphMSALAuthProvider" */;
 			buildPhases = (
-				4113CCBE088221CFAB02E0E5 /* [CP] Check Pods Manifest.lock */,
 				E50467002148089F00E97F84 /* Sources */,
 				E50467012148089F00E97F84 /* Frameworks */,
 				E50467022148089F00E97F84 /* Headers */,
 				E50467032148089F00E97F84 /* Resources */,
-				A68A80C02F972935AC048A43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,12 +172,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E504671C2148089F00E97F84 /* Build configuration list for PBXNativeTarget "MSGraphMSALAuthProviderTests" */;
 			buildPhases = (
-				779E885178F1E5251A2566F2 /* [CP] Check Pods Manifest.lock */,
 				E504670A2148089F00E97F84 /* Sources */,
 				E504670B2148089F00E97F84 /* Frameworks */,
 				E504670C2148089F00E97F84 /* Resources */,
-				436B3ACBFEA25181044253F3 /* [CP] Embed Pods Frameworks */,
-				9440FF36F1927D743436E406 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,110 +239,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4113CCBE088221CFAB02E0E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MSGraphMSALAuthProvider-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		436B3ACBFEA25181044253F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		779E885178F1E5251A2566F2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9440FF36F1927D743436E406 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests/Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A68A80C02F972935AC048A43 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSGraphMSALAuthProvider/Pods-MSGraphMSALAuthProvider-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E50467002148089F00E97F84 /* Sources */ = {
@@ -530,7 +387,6 @@
 		};
 		E504671A2148089F00E97F84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BC4CBE69B50E6ECDF1A3280 /* Pods-MSGraphMSALAuthProvider.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -558,7 +414,6 @@
 		};
 		E504671B2148089F00E97F84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0BA3AC6D82C930D3136E4A8 /* Pods-MSGraphMSALAuthProvider.release.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -586,7 +441,6 @@
 		};
 		E504671D2148089F00E97F84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB74C1885301E1AAE8C71C57 /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -610,7 +464,6 @@
 		};
 		E504671E2148089F00E97F84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85E2EFC682E42BA8BC141AEF /* Pods-MSGraphMSALAuthProvider-MSGraphMSALAuthProviderTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
