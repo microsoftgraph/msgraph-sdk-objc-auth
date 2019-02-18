@@ -1,0 +1,2 @@
+github "AzureAD/microsoft-authentication-library-for-objc" "0.2.3"
+github "microsoftgraph/msgraph-sdk-objc" "0.1.2"

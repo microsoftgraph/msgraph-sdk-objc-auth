@@ -399,6 +399,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider",
 					"$(PROJECT_DIR)",
@@ -426,6 +427,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider",
 					"$(PROJECT_DIR)",
