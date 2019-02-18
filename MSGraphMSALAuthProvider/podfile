@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+
+target 'MSGraphMSALAuthProvider' do
+	pod 'MSGraphClientSDK/Authentication', '~> 0.1.2'
+        pod 'MSAL', '~> 0.2'
+
+target 'MSGraphMSALAuthProviderTests' do
+    inherit! :complete
+end
+end

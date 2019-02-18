@@ -59,7 +59,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
     };
 
     NSError *error = [NSError errorWithDomain:MSALErrorDomain code:0 userInfo:nil];
-    OCMStub([mockPublicClientApplication accounts:[OCMArg setTo:error]]).andReturn(nil);
+    OCMStub([mockPublicClientApplication allAccounts:[OCMArg setTo:error]]).andReturn(nil);
     [authenticationProvider getAccessTokenWithCompletion:completionHandler];
 
 
@@ -129,7 +129,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
      MSALAccount *account = [MSALAccount new];
 
-    OCMStub([mockPublicClientApplication accounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
+    OCMStub([mockPublicClientApplication allAccounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
 
     OCMStub([mockPublicClientApplication acquireTokenSilentForScopes:[OCMArg any] account:[OCMArg any] completionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation){
         void (^completionHandler)(MSALResult *result, NSError *error);
@@ -158,7 +158,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     MSALAccount *account = [MSALAccount new];
 
-    OCMStub([mockPublicClientApplication accounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
+    OCMStub([mockPublicClientApplication allAccounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
 
     OCMStub([mockPublicClientApplication acquireTokenSilentForScopes:[OCMArg any] account:[OCMArg any] completionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation){
         void (^completionHandler)(MSALResult *result, NSError *error);
@@ -187,7 +187,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     MSALAccount *account = [MSALAccount new];
 
-    OCMStub([mockPublicClientApplication accounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
+    OCMStub([mockPublicClientApplication allAccounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
 
     OCMStub([mockPublicClientApplication acquireTokenSilentForScopes:[OCMArg any] account:[OCMArg any] completionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation){
         void (^completionHandler)(MSALResult *result, NSError *error);
@@ -223,7 +223,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     MSALAccount *account = [MSALAccount new];
 
-    OCMStub([mockPublicClientApplication accounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
+    OCMStub([mockPublicClientApplication allAccounts:[OCMArg anyObjectRef]]).andReturn(@[account]);
 
     OCMStub([mockPublicClientApplication acquireTokenSilentForScopes:[OCMArg any] account:[OCMArg any] completionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation){
         void (^completionHandler)(MSALResult *result, NSError *error);
