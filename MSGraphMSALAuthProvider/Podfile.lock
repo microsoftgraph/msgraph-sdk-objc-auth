@@ -2,16 +2,21 @@ PODS:
   - MSAL (0.2.3):
     - MSAL/app-lib (= 0.2.3)
   - MSAL/app-lib (0.2.3)
+  - MSGraphClientSDK (0.1.2):
+    - MSGraphClientSDK/Authentication (= 0.1.2)
+    - MSGraphClientSDK/Common (= 0.1.2)
   - MSGraphClientSDK/Authentication (0.1.2)
+  - MSGraphClientSDK/Common (0.1.2):
+    - MSGraphClientSDK/Authentication
 
 DEPENDENCIES:
   - MSAL (~> 0.2)
-  - MSGraphClientSDK/Authentication (~> 0.1.2)
+  - MSGraphClientSDK (~> 0.1.2)
 
 SPEC CHECKSUMS:
   MSAL: 2592b744b9215d9b7463f02fb9afd4e432c75c62
   MSGraphClientSDK: 4c3ca2fb1dee9438f7a007b77e0c68e7204e35b0
 
-PODFILE CHECKSUM: 9ff16a9ff96558452ff32ae86377228ada8674c9
+PODFILE CHECKSUM: b611513643f986f977a81d0cd3389e79ad4d08bc
 
 COCOAPODS: 1.4.0
