@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary      = "Microsoft Graph Auth Provider for MSAL."
 
   s.description  = <<-DESC
-		   Integrate authentication in your apps.
+		   Integrate authentication in your apps using this provider to add the capability of communicating with MSGraphClientSDK.
                    DESC
 
   s.homepage     = "http://graph.microsoft.io"
