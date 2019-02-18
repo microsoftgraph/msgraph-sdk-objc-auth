@@ -10,10 +10,12 @@ FOUNDATION_EXPORT double MSGraphMSALAuthProviderVersionNumber;
 //! Project version string for MSGraphMSALAuthProvider.
 FOUNDATION_EXPORT const unsigned char MSGraphMSALAuthProviderVersionString[];
 
+// In this header, you should import all the public headers of your framework using statements like #import <MSGraphMSALAuthProvider/PublicHeader.h>
+
 #ifndef MSGraphMSALAuthProvider_h
 #define MSGraphMSALAuthProvider_h
 
-#import "MSALAuthenticationProvider.h"
+#import <MSGraphMSALAuthProvider/MSALAuthenticationProvider.h>
 
 #endif
 
