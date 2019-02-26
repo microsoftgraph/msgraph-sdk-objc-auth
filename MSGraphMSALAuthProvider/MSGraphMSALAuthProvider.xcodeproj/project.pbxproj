@@ -11,11 +11,9 @@
 		E50467142148089F00E97F84 /* MSGraphMSALAuthProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E50467132148089F00E97F84 /* MSGraphMSALAuthProviderTests.m */; };
 		E50467162148089F00E97F84 /* MSGraphMSALAuthProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E50467082148089F00E97F84 /* MSGraphMSALAuthProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50467212148273F00E97F84 /* MSALAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E504671F2148273F00E97F84 /* MSALAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E56677FC2149850100C6B7AE /* MSGraphCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6DBB52149836500836E1D /* MSGraphCoreSDK.framework */; };
 		E5667825214BD31000C6B7AE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5667824214BD31000C6B7AE /* libOCMock.a */; };
 		E5667827214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */; };
 		E5AACA42214941C3001B9146 /* MSALAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */; };
-		E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EF242B2149338B00CDE1C4 /* MSAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,90 +23,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E50467042148089F00E97F84;
 			remoteInfo = MSGraphMSALAuthProvider;
-		};
-		E5B6DBB42149836500836E1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E5DC73DA211412BF0040BAB6;
-			remoteInfo = MSGraphCoreSDK;
-		};
-		E5B6DBB62149836500836E1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E5069AD6211C1AD500432372;
-			remoteInfo = MSGraphCoreSDKTests;
-		};
-		E5EF242A2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65A6F431E3FD30A00C69FBA;
-			remoteInfo = "MSAL (iOS Framework)";
-		};
-		E5EF242C2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65A6FC11E3FF47D00C69FBA;
-			remoteInfo = "MSAL iOS Unit Tests";
-		};
-		E5EF242E2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65A6F501E3FD32D00C69FBA;
-			remoteInfo = "MSAL (Mac Framework)";
-		};
-		E5EF24302149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65A6FD01E3FF49C00C69FBA;
-			remoteInfo = "MSAL Mac Unit Tests";
-		};
-		E5EF24322149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D61A64331E5A29580086D120;
-			remoteInfo = "MSAL Test App (iOS)";
-		};
-		E5EF24342149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D61A646C1E5AA7120086D120;
-			remoteInfo = "MSAL Test App (Mac)";
-		};
-		E5EF24362149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 962E37BC1E720C5D00DE71FE;
-			remoteInfo = "MSAL Test Automation (iOS)";
-		};
-		E5EF24382149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D672279F1EBD111900F3422A;
-			remoteInfo = "unit-test-host";
-		};
-		E5EF243A2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B2BB73702112C32C000EA4C5;
-			remoteInfo = InteractiveiOSTests;
-		};
-		E5EF243C2149338B00CDE1C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B29E2ACE21238F5200B170ED;
-			remoteInfo = MultiAppiOSTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -133,8 +47,6 @@
 		E5667824214BD31000C6B7AE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		E5667826214BD95A00C6B7AE /* MSALAuthenticationProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProviderTests.m; sourceTree = "<group>"; };
 		E5AACA41214941C3001B9146 /* MSALAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAuthenticationProvider.m; sourceTree = "<group>"; };
-		E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSGraphCoreSDK.xcodeproj; path = "msgraph-sdk-objc/MSGraphCoreSDK/MSGraphCoreSDK.xcodeproj"; sourceTree = "<group>"; };
-		E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSAL.xcodeproj; path = msalIos/MSAL/MSAL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56677FC2149850100C6B7AE /* MSGraphCoreSDK.framework in Frameworks */,
-				E5EF243E214933AD00CDE1C4 /* MSAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +72,6 @@
 		E50466FB2148089F00E97F84 = {
 			isa = PBXGroup;
 			children = (
-				E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */,
-				E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */,
 				E50467072148089F00E97F84 /* MSGraphMSALAuthProvider */,
 				E50467122148089F00E97F84 /* MSGraphMSALAuthProviderTests */,
 				E50467062148089F00E97F84 /* Products */,
@@ -225,32 +133,6 @@
 				E5667823214BD31000C6B7AE /* OCMArg.h */,
 			);
 			path = OCMock;
-			sourceTree = "<group>";
-		};
-		E5B6DBA62149836500836E1D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E5B6DBB52149836500836E1D /* MSGraphCoreSDK.framework */,
-				E5B6DBB72149836500836E1D /* MSGraphCoreSDKTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E5EF241D2149338B00CDE1C4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E5EF242B2149338B00CDE1C4 /* MSAL.framework */,
-				E5EF242D2149338B00CDE1C4 /* "MSAL-iOS-UI-Tests".xctest */,
-				E5EF242F2149338B00CDE1C4 /* MSAL.framework */,
-				E5EF24312149338B00CDE1C4 /* "MSAL-Mac-Unit-Tests".xctest */,
-				E5EF24332149338B00CDE1C4 /* MSAL Test App.app */,
-				E5EF24352149338B00CDE1C4 /* MSAL Test App.app */,
-				E5EF24372149338B00CDE1C4 /* MSAL Test Automation (iOS).app */,
-				E5EF24392149338B00CDE1C4 /* unit-test-host.app */,
-				E5EF243B2149338B00CDE1C4 /* InteractiveiOSTests.xctest */,
-				E5EF243D2149338B00CDE1C4 /* MultiAppiOSTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,16 +215,6 @@
 			mainGroup = E50466FB2148089F00E97F84;
 			productRefGroup = E50467062148089F00E97F84 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E5EF241D2149338B00CDE1C4 /* Products */;
-					ProjectRef = E5EF241C2149338B00CDE1C4 /* MSAL.xcodeproj */;
-				},
-				{
-					ProductGroup = E5B6DBA62149836500836E1D /* Products */;
-					ProjectRef = E5B6DBA52149836500836E1D /* MSGraphCoreSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E50467042148089F00E97F84 /* MSGraphMSALAuthProvider */,
@@ -350,93 +222,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E5B6DBB52149836500836E1D /* MSGraphCoreSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MSGraphCoreSDK.framework;
-			remoteRef = E5B6DBB42149836500836E1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5B6DBB72149836500836E1D /* MSGraphCoreSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MSGraphCoreSDKTests.xctest;
-			remoteRef = E5B6DBB62149836500836E1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF242B2149338B00CDE1C4 /* MSAL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MSAL.framework;
-			remoteRef = E5EF242A2149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF242D2149338B00CDE1C4 /* "MSAL-iOS-UI-Tests".xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "\"MSAL-iOS-UI-Tests\".xctest";
-			remoteRef = E5EF242C2149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF242F2149338B00CDE1C4 /* MSAL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MSAL.framework;
-			remoteRef = E5EF242E2149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF24312149338B00CDE1C4 /* "MSAL-Mac-Unit-Tests".xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "\"MSAL-Mac-Unit-Tests\".xctest";
-			remoteRef = E5EF24302149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF24332149338B00CDE1C4 /* MSAL Test App.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "MSAL Test App.app";
-			remoteRef = E5EF24322149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF24352149338B00CDE1C4 /* MSAL Test App.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "MSAL Test App.app";
-			remoteRef = E5EF24342149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF24372149338B00CDE1C4 /* MSAL Test Automation (iOS).app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "MSAL Test Automation (iOS).app";
-			remoteRef = E5EF24362149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF24392149338B00CDE1C4 /* unit-test-host.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "unit-test-host.app";
-			remoteRef = E5EF24382149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF243B2149338B00CDE1C4 /* InteractiveiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = InteractiveiOSTests.xctest;
-			remoteRef = E5EF243A2149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5EF243D2149338B00CDE1C4 /* MultiAppiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MultiAppiOSTests.xctest;
-			remoteRef = E5EF243C2149338B00CDE1C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E50467032148089F00E97F84 /* Resources */ = {
@@ -488,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -536,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -549,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -591,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -603,6 +390,7 @@
 		E504671A2148089F00E97F84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -611,13 +399,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MSGraphMSALAuthProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -629,6 +418,7 @@
 		E504671B2148089F00E97F84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -637,13 +427,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider/**",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProvider",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MSGraphMSALAuthProvider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -655,16 +446,20 @@
 		E504671D2148089F00E97F84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "&(PROJECT_DIIR)/MSGraphMSALAuthProviderTests/Frameworks";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = MSGraphMSALAuthProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,16 +469,20 @@
 		E504671E2148089F00E97F84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "&(PROJECT_DIIR)/MSGraphMSALAuthProviderTests/Frameworks";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = MSGraphMSALAuthProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MSGraphMSALAuthProviderTests/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Microsoft.MSGraph.MSGraphMSALAuthProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -3,14 +3,22 @@ This client library is a release candidate and is still in preview status - plea
 
 This library provides implementation of MSAuthenticationProvider that can be used to jump-start development with the [Microsoft Graph SDK for ObjC](https://github.com/microsoftgraph/msgraph-sdk-objc)
 
+Note: This library currently supports only iOS platform. MacOS support will be provided in future release.
+
 ## Installation
+
+### Using CocoaPods
+
+You can use [CocoaPods](https://cocoapods.org/) to remain up to date with our latest version. Include the following line in your podfile:
+  ``` 
+   pod 'MSGraphMSALAuthProvider'
+  ```
 
 
 ### Using Carthage
 
 
-
-We use [Carthage](https://github.com/Carthage/Carthage) for package management during the preview period. This package manager integrates very nicely with XCode while maintaining our ability to make changes to the library.
+You can also chose to use [Carthage](https://github.com/Carthage/Carthage) for package management.
 
 
 
@@ -28,7 +36,7 @@ github "microsoftgraph/msgraph-sdk-objc-auth" "tags/<latest_release_tag>"
 
 
 
-3. Run `carthage update`. This will fetch dependencies into a `Carthage/Checkouts` folder, then build the MSGraphCoreSDK library.
+3. Run `carthage update`. This will fetch dependencies into a `Carthage/Checkouts` folder, then build the library.
 
 4. On your application target's “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop the `MSGraphMSALAuthProvider.framework` from the `Carthage/Build` folder on disk.
 
@@ -66,23 +74,23 @@ When archiving your application for submission to the App Store or TestFlight, X
 
 ## Prerequisites
 
-This library has two submodules both serving their own specific purpose:
+This library has two dependencies both serving their own specific purpose:
 
 1. [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc)
-        This submodule has been added to handle all the Authentication specific scenarios.
+        This dependency has been added to handle all the Authentication specific scenarios.
     
-2. [MSGraphCoreSDK](https://github.com/microsoftgraph/msgraph-sdk-objc)
-        This submodule has been added to pick the MSAuthenticationProvider protocol from MSGraphCoreSDK so that MSGraphCoreSDK can communicate with this library to get the required token.
+2. [MSGraphClientSDK](https://github.com/microsoftgraph/msgraph-sdk-objc)
+        This dependency has been added to pick the MSAuthenticationProvider protocol from MSGraphClientSDK so that MSGraphClientSDK can communicate with this library to get the required token.
         
 So in order to use this library, you will have to add above two frameworks as well in your project.
 
 ## How to use
 
-Assuming you have gone through above steps and added the required frameworks, your project will now have all the three frameworks integrated in it.
+Assuming you have gone through above steps and added the required frameworks or pods, your project will now have all that is needed.
 
 So now you just need to follow below steps:
 
-1. Create an instance of MSALPublicClientApplication class as per the instructions provided here [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc). Make sure you follow other steps mentioned in MSAL readme in order to properly create this instance.It might look like below:
+1. Create an instance of MSALPublicClientApplication class as per the instructions provided here [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc). Make sure you follow other steps mentioned in MSAL readme in order to properly create this instance. It might look like below:
 ```
 NSError *error = nil;
 MSALPublicClientApplication *application =
@@ -95,6 +103,6 @@ MSALAuthenticationProvider *authenticationProvider = [[MSALAuthenticationProvide
 ```
   You now have an instance which follows MSAuthenticationProvider protocol and is configured with an MSALPublicClientApplication instance to handle authentication scenarios.
  
- 3. Now you can use this authenticationProvider in conjunction with MSGraphCoreSDK to make authenticated network calls to Microsoft Graph server. Head over to [How to use MSGraphCoreSDK](https://github.com/microsoftgraph/msgraph-sdk-objc#how-to-use-sdk) to see how you can use this.
+ 3. Now you can use this authenticationProvider in conjunction with MSGraphClientSDK to make authenticated network calls to Microsoft Graph server. Head over to [How to use MSGraphClientSDK](https://github.com/microsoftgraph/msgraph-sdk-objc#how-to-use-sdk) to see how you can use this.
  
 By now, you will have everything up and running. 

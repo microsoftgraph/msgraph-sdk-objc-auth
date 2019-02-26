@@ -32,7 +32,7 @@
 {
     //Get the list of already logged in accounts.
     NSError *accountsAccessError;
-    NSArray *accountsArray = [_publicClientApplication accounts:&accountsAccessError];
+    NSArray *accountsArray = [_publicClientApplication allAccounts:&accountsAccessError];
     if(accountsAccessError)
     {
         completion(nil, accountsAccessError);
