@@ -8,22 +8,23 @@
 
 @property(strong, nonatomic) MSALPublicClientApplication *publicClientApplication;
 
-@property(strong, nonatomic) NSArray *scopes;
+@property(strong, nonatomic) MSALAuthenticationProviderOptions *providerOptions;
 
 @end
 
 @implementation MSALAuthenticationProvider
 
-- (id)initWithPublicClientApplication:(MSALPublicClientApplication *)publicClientApplication andScopes:(NSArray *)scopes
+- (id)initWithPublicClientApplication:(MSALPublicClientApplication *)publicClientApplication andOptions:(MSALAuthenticationProviderOptions *)providerOptions
 {
     NSParameterAssert(publicClientApplication);
-    NSParameterAssert(scopes);
+    NSParameterAssert(providerOptions);
+    NSParameterAssert(providerOptions.scopesArray);
 
     self = [super init];
     if(self)
     {
         _publicClientApplication = publicClientApplication;
-        _scopes = scopes;
+        _providerOptions = providerOptions;
     }
     return self;
 }
@@ -49,7 +50,7 @@
     if(firstAccount)
     {
         //If an account is available then silently acquire the token for the same and fire the completion
-        [_publicClientApplication acquireTokenSilentForScopes:_scopes
+        [_publicClientApplication acquireTokenSilentForScopes:_providerOptions.scopesArray
                                                       account:firstAccount
                                               completionBlock:^(MSALResult *result, NSError *error) {
                                                   if(!error)
@@ -80,7 +81,7 @@
 
 - (void)acquireTokenWithCompletion:(void (^)(NSString *, NSError *))completion
 {
-    [_publicClientApplication acquireTokenForScopes:_scopes
+    [_publicClientApplication acquireTokenForScopes:_providerOptions.scopesArray
                                     completionBlock:^(MSALResult *result, NSError *error) {
                                         if(!error)
                                         {

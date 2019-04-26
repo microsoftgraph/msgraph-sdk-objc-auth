@@ -31,7 +31,9 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
     OCMStub([mockApplication alloc]).andReturn(mockApplication);
     OCMStub([mockApplication initWithClientId:[OCMArg any] error:[OCMArg anyObjectRef]]).andReturn(mockApplication);
     mockPublicClientApplication = [[MSALPublicClientApplication alloc] initWithClientId:testClientId error:&error];
-    authenticationProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andScopes:[kScopes componentsSeparatedByString:@","]];
+
+    MSALAuthenticationProviderOptions *authProviderOptions = [[MSALAuthenticationProviderOptions alloc] initWithScopes:[kScopes componentsSeparatedByString:@","]];
+    authenticationProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andOptions:authProviderOptions];
     NSLog(@"");
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
@@ -42,8 +44,8 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 }
 
 - (void)testInit {
-    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:nil andScopes:[NSArray new]]);
-    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andScopes:nil]);
+    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:nil andOptions:[[MSALAuthenticationProviderOptions alloc] initWithScopes:[kScopes componentsSeparatedByString:@","]]]);
+    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andOptions:nil]);
 }
 
 - (void)testAccountsAccessError {
