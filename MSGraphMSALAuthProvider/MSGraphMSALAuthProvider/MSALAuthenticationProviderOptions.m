@@ -16,7 +16,7 @@
     self = [super init];
     if(self)
     {
-        scopesArray = scopeArray?scopeArray:[NSArray new];
+        scopesArray = scopeArray?[scopeArray copy]:[NSArray new];
     }
     return self;
 }

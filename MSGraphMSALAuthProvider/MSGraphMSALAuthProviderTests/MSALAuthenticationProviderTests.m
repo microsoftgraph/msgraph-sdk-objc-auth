@@ -6,6 +6,12 @@
 #import <OCMock/OCMock.h>
 #import "MSALAuthenticationProvider.h"
 
+@interface MSALAuthenticationProvider()
+
+@property(strong, nonatomic) MSALAuthenticationProviderOptions *providerOptions;
+
+@end
+
 @interface MSALAuthenticationProviderTests : XCTestCase
 
 @end
@@ -62,7 +68,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     NSError *error = [NSError errorWithDomain:MSALErrorDomain code:0 userInfo:nil];
     OCMStub([mockPublicClientApplication allAccounts:[OCMArg setTo:error]]).andReturn(nil);
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -86,7 +92,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler ([MSALResult new],nil);
 
     });
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:nil andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -110,7 +116,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler (nil,[NSError new]);
 
     });
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -139,7 +145,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler ([MSALResult new],nil);
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -168,8 +174,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler (nil,[NSError new]);
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
-
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
     XCTAssertTrue(bCompletionBlockInvoked);
@@ -204,7 +209,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -240,7 +245,8 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    MSALAuthenticationProviderOptions *options = [[MSALAuthenticationProviderOptions alloc] initWithScopes:@[@"Mail.Send"]];
+    [authenticationProvider getAccessTokenForProviderOptions:options andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];

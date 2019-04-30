@@ -18,6 +18,6 @@
  @param providerOptions An MSALAuthenticationProviderOptions instance containing required options for MSALAuthentictionProvider.
  @return An instance of MSALAuthenticationProvider with provided values.
  */
--(instancetype)initWithPublicClientApplication:(MSALPublicClientApplication *)publicClientApplication andOptions:(MSALAuthenticationProviderOptions *)providerOptions;
+- (instancetype)initWithPublicClientApplication:(MSALPublicClientApplication *)publicClientApplication andOptions:(MSALAuthenticationProviderOptions *)providerOptions;
 
 @end

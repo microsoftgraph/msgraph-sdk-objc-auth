@@ -29,8 +29,13 @@
     return self;
 }
 
-- (void)getAccessTokenWithCompletion:(void (^)(NSString *, NSError *))completion
+- (void)getAccessTokenForProviderOptions:(id<MSAuthenticationProviderOptions>)authProviderOptions andCompletion:(void (^)(NSString *, NSError *))completion
 {
+    MSALAuthenticationProviderOptions *providerOptions = authProviderOptions;
+    if(!providerOptions)
+    {
+        providerOptions = _providerOptions;
+    }
     //Get the list of already logged in accounts.
     NSError *accountsAccessError;
     NSArray *accountsArray = [_publicClientApplication allAccounts:&accountsAccessError];
@@ -50,7 +55,7 @@
     if(firstAccount)
     {
         //If an account is available then silently acquire the token for the same and fire the completion
-        [_publicClientApplication acquireTokenSilentForScopes:_providerOptions.scopesArray
+        [_publicClientApplication acquireTokenSilentForScopes:providerOptions.scopesArray
                                                       account:firstAccount
                                               completionBlock:^(MSALResult *result, NSError *error) {
                                                   if(!error)
@@ -62,7 +67,7 @@
                                                       if([error.domain isEqual:MSALErrorDomain] && error.code == MSALErrorInteractionRequired)
                                                       {
                                                           //MSALErrorInteractionRequired error indicates that a call to acquireTokenForScopes is required to take the user through interactive flow for getting the access token.
-                                                          [self acquireTokenWithCompletion:completion];
+                                                          [self acquireTokenForProviderOptions:providerOptions withCompletion:completion];
                                                       }
                                                       else
                                                       {
@@ -74,14 +79,14 @@
     else
     {
         //If there aren't any accounts then need to acquire token interactively
-        [self acquireTokenWithCompletion:completion];
+        [self acquireTokenForProviderOptions:providerOptions withCompletion:completion];
 
     }
 }
 
-- (void)acquireTokenWithCompletion:(void (^)(NSString *, NSError *))completion
+- (void)acquireTokenForProviderOptions:(MSALAuthenticationProviderOptions *)providerOptions withCompletion:(void (^)(NSString *, NSError *))completion
 {
-    [_publicClientApplication acquireTokenForScopes:_providerOptions.scopesArray
+    [_publicClientApplication acquireTokenForScopes:providerOptions.scopesArray
                                     completionBlock:^(MSALResult *result, NSError *error) {
                                         if(!error)
                                         {
