@@ -6,6 +6,12 @@
 #import <OCMock/OCMock.h>
 #import "MSALAuthenticationProvider.h"
 
+@interface MSALAuthenticationProvider()
+
+@property(strong, nonatomic) MSALAuthenticationProviderOptions *providerOptions;
+
+@end
+
 @interface MSALAuthenticationProviderTests : XCTestCase
 
 @end
@@ -31,7 +37,9 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
     OCMStub([mockApplication alloc]).andReturn(mockApplication);
     OCMStub([mockApplication initWithClientId:[OCMArg any] error:[OCMArg anyObjectRef]]).andReturn(mockApplication);
     mockPublicClientApplication = [[MSALPublicClientApplication alloc] initWithClientId:testClientId error:&error];
-    authenticationProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andScopes:[kScopes componentsSeparatedByString:@","]];
+
+    MSALAuthenticationProviderOptions *authProviderOptions = [[MSALAuthenticationProviderOptions alloc] initWithScopes:[kScopes componentsSeparatedByString:@","]];
+    authenticationProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andOptions:authProviderOptions];
     NSLog(@"");
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
@@ -42,8 +50,8 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 }
 
 - (void)testInit {
-    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:nil andScopes:[NSArray new]]);
-    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andScopes:nil]);
+    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:nil andOptions:[[MSALAuthenticationProviderOptions alloc] initWithScopes:[kScopes componentsSeparatedByString:@","]]]);
+    XCTAssertThrows([[MSALAuthenticationProvider alloc] initWithPublicClientApplication:mockPublicClientApplication andOptions:nil]);
 }
 
 - (void)testAccountsAccessError {
@@ -60,7 +68,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     NSError *error = [NSError errorWithDomain:MSALErrorDomain code:0 userInfo:nil];
     OCMStub([mockPublicClientApplication allAccounts:[OCMArg setTo:error]]).andReturn(nil);
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -84,7 +92,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler ([MSALResult new],nil);
 
     });
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:nil andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -108,7 +116,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler (nil,[NSError new]);
 
     });
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -137,7 +145,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler ([MSALResult new],nil);
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -166,8 +174,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
         completionHandler (nil,[NSError new]);
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
-
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
     XCTAssertTrue(bCompletionBlockInvoked);
@@ -202,7 +209,7 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    [authenticationProvider getAccessTokenForProviderOptions:OCMProtocolMock(@protocol(MSAuthenticationProviderOptions)) andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
@@ -238,7 +245,8 @@ NSString * const kScopes = @"https://graph.microsoft.com/User.Read, https://grap
 
     });
 
-    [authenticationProvider getAccessTokenWithCompletion:completionHandler];
+    MSALAuthenticationProviderOptions *options = [[MSALAuthenticationProviderOptions alloc] initWithScopes:@[@"Mail.Send"]];
+    [authenticationProvider getAccessTokenForProviderOptions:options andCompletion:completionHandler];
 
 
     [self waitForExpectations:@[testExpectation] timeout:5.0];
