@@ -90,16 +90,21 @@ Assuming you have gone through above steps and added the required frameworks or 
 
 So now you just need to follow below steps:
 
-1. Create an instance of MSALPublicClientApplication class as per the instructions provided here [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc). Make sure you follow other steps mentioned in MSAL readme in order to properly create this instance. It might look like below:
+1. Create an instance of `MSALPublicClientApplication` class as per the instructions provided here [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc). Make sure you follow other steps mentioned in MSAL readme in order to properly create this instance. It might look like below:
 ```
 NSError *error = nil;
 MSALPublicClientApplication *application =
 [[MSALPublicClientApplication alloc] initWithClientId:@"<your-client-id-here>"
 error:&error];
 ```
-2. Create an instance of MSALAuthenticationProvider in below fashion:
+2. Create an instance of `MSALAuthenticationProviderOptions` like below:
 ```
-MSALAuthenticationProvider *authenticationProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:application andScopes:<array-of-scopes-for-which-you-need-access-token>];
+MSALAuthenticationProviderOptions *authProviderOptions= [[MSALAuthenticationProviderOptions alloc] initWithScopes:<array-of-scopes-for-which-you-need-access-token>];
+``` 
+
+3. Create an instance of `MSALAuthenticationProvider` in below fashion using `MSALPublicClientApplication` and `MSALAuthenticationProviderOptions` instances that you created in previous steps:
+```
+ MSALAuthenticationProvider *authProvider = [[MSALAuthenticationProvider alloc] initWithPublicClientApplication:publicClientApplication andOptions:authProviderOptions];
 ```
   You now have an instance which follows MSAuthenticationProvider protocol and is configured with an MSALPublicClientApplication instance to handle authentication scenarios.
  
