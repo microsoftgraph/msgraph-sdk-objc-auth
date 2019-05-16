@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSGraphMSALAuthProvider"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "Microsoft Graph Auth Provider for MSAL."
 
   s.description  = <<-DESC
