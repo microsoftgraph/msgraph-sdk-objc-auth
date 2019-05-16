@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSGraphMSALAuthProvider"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "Microsoft Graph Auth Provider for MSAL."
 
   s.description  = <<-DESC
@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   s.public_header_files = "MSGraphMSALAuthProvider/MSGraphMSALAuthProvider/*.h"
 
   s.dependency 'MSGraphClientSDK', '~> 1.0.0'
-  s.dependency 'MSAL', '~> 0.2'
+  s.dependency 'MSAL', '~> 0.2.3'
 end
