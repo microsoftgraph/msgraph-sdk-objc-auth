@@ -1,0 +1,16 @@
+page_type: sample
+products:
+  - office-365
+  - ms-graph
+languages:
+  - objc
+extensions:
+  contentType: sdks
+  technologies:
+    - Microsoft Graph
+    - Microsoft identity platform
+  platforms:
+    - iOS
+  createdDate: '9/10/2018 9:44:56 PM'
+title: MSAL Authentication Provider for Objective C
+description: MSAL Authentication Provider for Objective C
